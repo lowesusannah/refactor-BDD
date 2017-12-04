@@ -1,0 +1,9 @@
+document {
+  background-color: red;
+}
+
+#current-time {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+}
