@@ -8,13 +8,13 @@ describe('GalacticAge', function() {
     expect(newAgeInput.checkExpectancy()).toEqual("false");
     });
 
-  it('should return .24 of the user earth age when mercury conversion is performed', function() {
+  it('should return 0.24 of the user earth age when mercury conversion is performed', function() {
     let newAgeInput = new GalacticAge(20);
     console.log(newAgeInput);
     expect(newAgeInput.mercuryConversion()).toEqual(4.8);
   });
 
-  it('should return .62 of the user earth age when venus conversion is performed', function() {
+  it('should return 0.62 of the user earth age when venus conversion is performed', function() {
     let newAgeInput = new GalacticAge(20);
     console.log(newAgeInput);
     expect(newAgeInput.venusConversion()).toEqual(12.4);
@@ -31,6 +31,12 @@ describe('GalacticAge', function() {
     console.log(newAgeInput);
     expect(newAgeInput.jupiterConversion()).toEqual('237');
   });
-  it('')
+
+  it('should take two dates and determine the difference, in seconds, between the two', function() {
+    let newBirthday = new Date('Jan 20, 1988 07:30:00');
+    let standInDate = new Date('Dec 3, 2017 07:30:00');
+    let finalDate = (newBirthday, standInDate);
+    expect(finalDate.timeDifference()).toEqual(942624000000);
+  });
 
 });

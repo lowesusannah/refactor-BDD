@@ -13,11 +13,11 @@ export class GalacticAge {
 	}
 
 	mercuryConversion(){
-		return (.24 * this.earthAge);
+		return (0.24 * this.earthAge);
 	}
 
 	venusConversion(){
-		return(.62 * this.earthAge);
+		return(0.62 * this.earthAge);
 	}
 
 	marsConversion(){
@@ -29,4 +29,12 @@ export class GalacticAge {
 		const jupiterAge = 11.86 * this.earthAge;
 		return jupiterAge.toPrecision(3);
 	}
+
+	timeDifference() {
+		let date1 = new Date('Dec 3, 2017 07:30:00');
+		let date2 = new Date('Jan 20, 1988 07:30:00');
+		let difference = (date1.getTime() - date2.getTime());
+		return difference.toPrecision();
+	}
+
 }
