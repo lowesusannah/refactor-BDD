@@ -6,13 +6,13 @@ export class GalacticAge {
 	checkExpectancy() {
 		let maxEarthAge = 79;
 		if (this.earthAge >= maxEarthAge) {
-			return "true";
-			} else {
 			return "false";
+			} else {
+			return "true";
 		}
 	}
 
 	mercuryConversion(){
-		
+
 	}
 }

@@ -1,5 +1,4 @@
-import {GalacticAge} from './../js/bdd.js';
-
+import { GalacticAge } from './../js/bdd.js';
 
 $(document).ready(function() {
 	$('#time').text(moment().format('LLLL'));
