@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script type=“text/javascript” src=“build/js/app.js”></script>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <title></title>
+  </head>
+  <body>
+    <h3>Well look at the time!</h3>
+    <h3 id="current-time"></h3>
+    <div class="form-input">
+      <form class="" action="index.html" method="post">
+        <h2>Please your birthday and birth time details:</h2>
+        <input type="text" name="birth-year">
+          <label for="birth-year">Year</label>
+        <input type="text" name="birth-month">
+          <label for="birth-month">Month</label>
+        <input type="text" name="birth-day">
+          <label for="birth-day">Day</label>
+        <input type="text" name="birth-time" value="">
+        <!-- The current iteration of this app assumes user was born in same timezone as they currently reside, and that they know how to use 12 hour time vs. 24 hour time units. -->
+          <label for="birth-time">Hour and minute of time born</label>
+        <input type="radio" name="am-pm" value="true" id="am">
+          <label for="am-pm">AM</label>
+        <!-- pm will add another 12 hours to the am time -->
+        <input type="radio" name="am-pm" value="false" id="pm">
+          <label for="am-pm">PM</label>
+      </form>
+    </div>
+    <div class="output-display">
+
+    </div>
+  </body>
+</html>
