@@ -13,6 +13,20 @@ export class GalacticAge {
 	}
 
 	mercuryConversion(){
+		return (.24 * this.earthAge);
+	}
 
+	venusConversion(){
+		return(.62 * this.earthAge);
+	}
+
+	marsConversion(){
+		const marsAge = 1.88 * this.earthAge;
+		return marsAge.toPrecision(3);
+	}
+
+	jupiterConversion(){
+		const jupiterAge = 11.86 * this.earthAge;
+		return jupiterAge.toPrecision(3);
 	}
 }
