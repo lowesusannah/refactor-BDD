@@ -1,12 +1,18 @@
 import { GalacticAge } from './../js/bdd.js';
 
 $(document).ready(function() {
+console.log("hi");
 	$('#time').text(moment().format('LLLL'));
-	event.preventDefault();
-	// 	var goal = $(‘#goal’).val();
-	// 	var simpleCalculator = new Calculator(“hot pink”);
-	// 	var output = simpleCalculator.pingPong(goal);
-	// 	output.forEach(function(element) {
-	// 		$(‘solution’).append(“<li>’ + element + ‘</li>’);
+	$(".age-form").submit(function(event){
+		event.preventDefault();
+		alert("hi");
+		let birthdate = $("#birthdate").val();
+		let age = parseInt($("#age").val());
+		let ageConversion = new GalacticAge(age, birthdate);
+		console.log(ageConversion.birthdate +", "+ageConversion.age);
+		$("#output-display").text(ageConversion.jupiterConversion());
+		// chosenAge.timeDifference(standInDate, newBirthday);
+	});
+
 
 });

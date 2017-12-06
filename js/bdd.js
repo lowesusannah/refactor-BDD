@@ -1,6 +1,7 @@
 export class GalacticAge {
-	constructor(ageInput) {
-	 this.earthAge = ageInput;
+	constructor(age, birthdate) {
+	 this.birthdate = new Date(birthdate);
+	 this.earthAge = age;
 	}
 
 	checkExpectancy() {
@@ -30,11 +31,9 @@ export class GalacticAge {
 		return jupiterAge.toPrecision(3);
 	}
 
-	timeDifference() {
-		let date1 = new Date('Dec 3, 2017 07:30:00');
-		let date2 = new Date('Jan 20, 1988 07:30:00');
-		let difference = (date1.getTime() - date2.getTime());
-		return difference.toPrecision();
+	timeDifference(firstDate, secondDate) {
+		let difference = (firstDate.getTime() - secondDate.getTime());
+		return difference;
 	}
 
 }

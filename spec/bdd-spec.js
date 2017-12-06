@@ -35,8 +35,8 @@ describe('GalacticAge', function() {
   it('should take two dates and determine the difference, in seconds, between the two', function() {
     let newBirthday = new Date('Jan 20, 1988 07:30:00');
     let standInDate = new Date('Dec 3, 2017 07:30:00');
-    let finalDate = (newBirthday, standInDate);
-    expect(finalDate.timeDifference()).toEqual(942624000000);
+    let chosenAge = new GalacticAge(30);
+    expect(chosenAge.timeDifference(standInDate, newBirthday)).toEqual(942624000000);
   });
 
 });

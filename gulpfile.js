@@ -105,16 +105,3 @@ gulp.task('bowerBuild', ['bower'], function() {
 gulp.task('htmlBuild', function(){
   browserSync.reload();
 });
-
-gulp.task('jsBrowserify', ['concatInterface'], function() {
-  return browserify({ entries: ['./tmp/allConcat.js'] })
-    .bundle()
-    .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'));
-});
-
-gulp.task('cssBuild', function() {
-  gulp.src(['css/*.css'])
-  .pipe(concat('vendor.css'))
-  .pipe(gulp.dest('./build/css'))
-});
