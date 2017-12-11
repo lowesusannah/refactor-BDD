@@ -46,10 +46,7 @@ _This is an application which calculate's a user's age in several different plan
 | Determine the user's age according to Jupiter solar years (11.86 of an earth solar year)      | User's age in earth years = 20      |   User's age in Jupiter years = 237.2 |
 | Determine if user's age has exceeded approx. average life expectancy in the US based on 2015 data (79 years).      | User's earth age = 80 | True (age exceeds life expectancy) |
 | Determine current earth date and time, using Pacific timezone and earth units of measurement.      | Get date & time | Current Year: 2017, Current month: November, Current Date: 17th, Current time: 3:00pm, Current mintues: 00, Current seconds: 00 |
-<<<<<<< HEAD
-| Convert a time in earth years, months, days, minutes and seconds into earth seconds | Earth years = 10, earth months = 10, earth days = 10, earth minutes = 10, earth seconds = 10 | Approx. total earth seconds =
-=======
-| Convert a time in earth years, months, days, minutes and seconds into earth seconds | Earth years = 10, earth months = 10, earth days = 10, earth minutes = 10, earth seconds = 10 | Approx. total earth seconds = |
+| Determine the user's life expectancy on each planet | Age: 20; current life expectancy in us is 79 | 14.16, 36.58, 110.92 and 699.74 life expectancy in Mercury, Venus, Mars and Jupiter years; 50 years additional life expectancy on earth|
 
 
 ## Known Bugs
