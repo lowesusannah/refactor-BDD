@@ -4,21 +4,22 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="build/js/vendor.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/moment/min/moment.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Galactic Age Calculator</title>
   </head>
   <body>
+    <h1>Galactic Age Calculator</h1>
     <div class="form-input">
       <form class="age-form">
-        <h4>Please enter your birthday and birth time details:</h4>
+        <h4>Please enter your birthday and birth time details</h4>
         <label for="birth-year">Date of birth </label>
         <input type="date" name="birth-year" id="birthdate"> <br>
         <label for="age">Current age </label>
         <input type="text" id="age"> <br>
         <label for="birth-time">Time born </label>
-        <input type="text" name="birth-time"> <br>
+        <input type="text" name="birth-time">
         <!-- The current iteration of this app assumes user was born in same timezone as they currently reside, and that they know how to use 12 hour time vs. 24 hour time units. -->
         <input type="radio" name="am-pm" value="true" id="am">
           <label for="am-pm"> AM </label>
@@ -29,9 +30,10 @@
       </form>
     </div>
     <div id="output-display-age">
-      <h3 id="time"></h3>
+      <h4> Your age on each planet is </h4>
     </div>
     <div id="output-display-expectancy">
+      <h4> Your life expectancy on each planet is </h4>
     </div>
   </body>
 </html>

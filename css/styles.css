@@ -1,9 +1,47 @@
-document {
-  background-color: red;
+body {
+  background-image: url('https://cdn.stocksnap.io/img-thumbs/960w/EGT98NP9TX.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-color: #848363;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-#current-time {
-  background-color: blue;
-  height: 100px;
-  width: 100px;
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.form-input {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 300px;
+  width: 70%;
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input {
+margin: 10px; }
+
+button {
+  background-color: #730F00;
+  color: white;
+  border: 2px solid white;
+  height: 50px;
+  width: 70px;
+  align-self: center;
+}
+
+#output-display-age, #output-display-expectancy {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 40%;
+  text-align: center;
+  border-radius: 3px;
+  margin: 20px;
+  padding: 10px;
 }

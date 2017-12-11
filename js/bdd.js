@@ -14,12 +14,12 @@ export class GalacticAge {
 
 	marsConversion(){
 		const marsAge = 1.88 * this.earthAge;
-		return marsAge.toPrecision(3);
+		return marsAge.toFixed(2);
 	}
 
 	jupiterConversion(){
 		const jupiterAge = 11.86 * this.earthAge;
-		return jupiterAge.toPrecision(3);
+		return jupiterAge.toFixed(2);
 	}
 
 	timeDifference(firstDate, secondDate) {
@@ -46,12 +46,10 @@ export class GalacticAge {
 	}
 
 	marsExpectancy(){
-		let marsExpect = (1.88 * (79 - this.earthAge));
-		return marsExpect.toPrecision(5);
+		return (1.88 * (79 - this.earthAge));
 	}
 
 	jupiterExpectancy(){
-		const jupiterExpect = (11.86 * (79 - this.earthAge));
-		return jupiterExpect.toPrecision(5);
+		return (11.86 * (79 - this.earthAge));
 	}
 }
