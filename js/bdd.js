@@ -4,15 +4,6 @@ export class GalacticAge {
 	 this.earthAge = age;
 	}
 
-	checkExpectancy() {
-		let maxEarthAge = 79;
-		if (this.earthAge >= maxEarthAge) {
-			return "false";
-			} else {
-			return "true";
-		}
-	}
-
 	mercuryConversion(){
 		return (0.24 * this.earthAge);
 	}
@@ -36,4 +27,31 @@ export class GalacticAge {
 		return difference;
 	}
 
+	checkExpectancy() {
+		let maxEarthAge = 79;
+		if (this.earthAge >= maxEarthAge) {
+			return "sorry, can't calculate";
+		} else {
+			let earthExpectancy = 79 - this.earthAge;
+			return earthExpectancy;
+		}
+	}
+
+	mercuryExpectancy() {
+		return (0.24 * (79 - this.earthAge));
+	}
+
+	venusExpectancy() {
+		return (0.62 * (79 - this.earthAge));
+	}
+
+	marsExpectancy(){
+		let marsExpect = (1.88 * (79 - this.earthAge));
+		return marsExpect.toPrecision(5);
+	}
+
+	jupiterExpectancy(){
+		const jupiterExpect = (11.86 * (79 - this.earthAge));
+		return jupiterExpect.toPrecision(5);
+	}
 }

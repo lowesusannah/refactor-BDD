@@ -18,16 +18,6 @@ var GalacticAge = exports.GalacticAge = function () {
 	}
 
 	_createClass(GalacticAge, [{
-		key: "checkExpectancy",
-		value: function checkExpectancy() {
-			var maxEarthAge = 79;
-			if (this.earthAge >= maxEarthAge) {
-				return "false";
-			} else {
-				return "true";
-			}
-		}
-	}, {
 		key: "mercuryConversion",
 		value: function mercuryConversion() {
 			return 0.24 * this.earthAge;
@@ -55,6 +45,34 @@ var GalacticAge = exports.GalacticAge = function () {
 			var difference = firstDate.getTime() - secondDate.getTime();
 			return difference;
 		}
+	}, {
+		key: "checkExpectancy",
+		value: function checkExpectancy() {
+			var maxEarthAge = 79;
+			if (this.earthAge >= maxEarthAge) {
+				return "sorry, can't calculate";
+			} else {
+				var earthExpectancy = 79 - this.earthAge;
+				return earthExpectancy;
+			}
+		}
+	}, {
+		key: "mercuryExpectancy",
+		value: function mercuryExpectancy() {
+			return 0.24 * (79 - this.earthAge);
+		}
+		// venusExpectancy() {
+		// 	return (0.62 * this.earthAge.checkExpectancy());
+		// }
+		// marsExpectancy(){
+		// 	const marsExpect = 1.88 * this.earthAge.checkExpectancy();
+		// 	return marsExpect.toPrecision(3);
+		// }
+		// jupiterExpectancy(){
+		// 	const jupiterExpect = 11.86 * this.earthAge.checkExpectancy();
+		// 	return jupiterExpect.toPrecision(3);
+		// }
+
 	}]);
 
 	return GalacticAge;
@@ -66,17 +84,22 @@ var GalacticAge = exports.GalacticAge = function () {
 var _bdd = require('./../js/bdd.js');
 
 $(document).ready(function () {
-	console.log("hi");
 	$('#time').text(moment().format('LLLL'));
 	$(".age-form").submit(function (event) {
 		event.preventDefault();
-		alert("hi");
 		var birthdate = $("#birthdate").val();
 		var age = parseInt($("#age").val());
 		var ageConversion = new _bdd.GalacticAge(age, birthdate);
-		console.log(ageConversion.birthdate + ", " + ageConversion.age);
-		$("#output-display").text(ageConversion.jupiterConversion());
-		// chosenAge.timeDifference(standInDate, newBirthday);
+
+		$("#output-display-expectancy").append("Earth (US): " + ageConversion.checkExpectancy() + "<br>");
+		$("#output-display-expectancy").append("Jupiter" + ageConversion.checkExpectancy() + "<br>");
+		$("#output-display-expectancy").append("Your earth life expectancy for earth (United States) is: " + ageConversion.checkExpectancy() + "<br>");
+		$("#output-display-expectancy").append("Your earth life expectancy for the US is: " + ageConversion.checkExpectancy() + "<br>");
+
+		$("#output-display-age").append("Jupiter: " + ageConversion.jupiterConversion() + "<br>");
+		$("#output-display-age").append("Mercury: " + ageConversion.mercuryConversion() + "<br>");
+		$("#output-display-age").append("Venus: " + ageConversion.venusConversion() + "<br>");
+		$("#output-display-age").append("Mars: " + ageConversion.marsConversion());
 	});
 });
 
