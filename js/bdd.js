@@ -38,18 +38,40 @@ export class GalacticAge {
 	}
 
 	mercuryExpectancy() {
+		let maxEarthAge = 79;
+		if (this.earthAge >= maxEarthAge) {
+			return "sorry, can't calculate";
+		} else {
 		return (0.24 * (79 - this.earthAge));
+		}
 	}
 
 	venusExpectancy() {
+		let maxEarthAge = 79;
+		if (this.earthAge >= maxEarthAge) {
+			return "sorry, can't calculate";
+		} else {
 		return (0.62 * (79 - this.earthAge));
+		}
 	}
 
 	marsExpectancy(){
-		return (1.88 * (79 - this.earthAge));
+		let maxEarthAge = 79;
+		if (this.earthAge >= maxEarthAge) {
+			return "sorry, can't calculate";
+		} else {
+		const marsExpectancy = (1.88 * (79 - this.earthAge))
+		return marsExpectancy.toFixed(2);
+		}
 	}
 
 	jupiterExpectancy(){
-		return (11.86 * (79 - this.earthAge));
+		let maxEarthAge = 79;
+		if (this.earthAge >= maxEarthAge) {
+			return "sorry, can't calculate";
+		} else {
+		const jupiterExpectancy = (11.86 * (79 - this.earthAge))
+		return jupiterExpectancy.toFixed(2);
+		}
 	}
 }

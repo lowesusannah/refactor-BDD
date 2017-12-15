@@ -10,7 +10,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var GalacticAge = exports.GalacticAge = function () {
-	function GalacticAge(age, birthdate) {
+	function GalacticAge(birthdate, age) {
 		_classCallCheck(this, GalacticAge);
 
 		this.birthdate = new Date(birthdate);
@@ -31,13 +31,13 @@ var GalacticAge = exports.GalacticAge = function () {
 		key: "marsConversion",
 		value: function marsConversion() {
 			var marsAge = 1.88 * this.earthAge;
-			return marsAge.toFixed(2);
+			return marsAge.toFixed();
 		}
 	}, {
 		key: "jupiterConversion",
 		value: function jupiterConversion() {
 			var jupiterAge = 11.86 * this.earthAge;
-			return jupiterAge.toFixed(2);
+			return jupiterAge.toFixed();
 		}
 	}, {
 		key: "timeDifference",
@@ -53,28 +53,48 @@ var GalacticAge = exports.GalacticAge = function () {
 				return "sorry, can't calculate";
 			} else {
 				var earthExpectancy = 79 - this.earthAge;
-				return earthExpectancy;
+				return earthExpectancy.toFixed();
 			}
 		}
 	}, {
 		key: "mercuryExpectancy",
 		value: function mercuryExpectancy() {
-			return 0.24 * (79 - this.earthAge);
+			var maxEarthAge = 79;
+			if (this.earthAge >= maxEarthAge) {
+				return "sorry, can't calculate";
+			} else {
+				return (0.24 * (79 - this.earthAge)).toFixed();
+			}
 		}
 	}, {
 		key: "venusExpectancy",
 		value: function venusExpectancy() {
-			return 0.62 * (79 - this.earthAge);
+			var maxEarthAge = 79;
+			if (this.earthAge >= maxEarthAge) {
+				return "sorry, can't calculate";
+			} else {
+				return (0.62 * (79 - this.earthAge)).toFixed();
+			}
 		}
 	}, {
 		key: "marsExpectancy",
 		value: function marsExpectancy() {
-			return 1.88 * (79 - this.earthAge);
+			var maxEarthAge = 79;
+			if (this.earthAge >= maxEarthAge) {
+				return "sorry, can't calculate";
+			} else {
+				return (1.88 * (79 - this.earthAge)).toFixed();
+			}
 		}
 	}, {
 		key: "jupiterExpectancy",
 		value: function jupiterExpectancy() {
-			return 11.86 * (79 - this.earthAge);
+			var maxEarthAge = 79;
+			if (this.earthAge >= maxEarthAge) {
+				return "sorry, can't calculate";
+			} else {
+				return (11.86 * (79 - this.earthAge)).toFixed();
+			}
 		}
 	}]);
 
